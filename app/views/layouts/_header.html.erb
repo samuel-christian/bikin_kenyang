@@ -1,0 +1,53 @@
+<div class="header">
+  <div class="container-fluid header-container">
+      <div class="row">
+          <div class="col-md-3 logo-area">
+              <%= link_to image_tag('logo-text.png', :class => 'logo-text'), root_path %>
+          </div>
+          <div class="col-md-6 text-center nav-area">
+              <div class="navigation-bar">
+                  <div class="container">
+                      <div class="row pull-center row-nav-item">
+                          <%= link_to root_path do %>
+                          	<div class="col-md-1 nav-item">Home</div>
+                          <% end %>
+                          <%= link_to root_path do %>
+                          	<div class="col-md-1 nav-item">Menu</div>
+                          <% end %>
+                          <%= link_to root_path do %>
+                          	<div class="col-md-1 nav-item">About</div>
+                          <% end %>
+                          <%= link_to root_path do %>
+                          	<div class="col-md-1 nav-item last-nav-item">Contact</div>
+                          <% end %>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-3">
+              <div class="container">
+                  <div class="row login-area">
+                  		<%= link_to root_path do %>
+                      	<div class="col-md-1 login-item">Daftar</div>
+                      <% end %>
+                      <div class="col-md-1 login-item last-login-item">
+                      		<a href="#" class="dropdown-toggle dropdown-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                      			<div class="dropdown">
+                          		Masuk <span class="caret"></span>
+                              <ul class="dropdown-menu signin-form">
+                                  <form>
+                                    <div class="form-group"><input type="email" class="form-control" id="input-email" placeholder="Email"/></div>
+                                    <div class="form-group"><input type="password" class="form-control" id="input-password" placeholder="Password"/></div>
+                                    <div class="form-group"><button type="submit" class="btn btn-primary btn-accounts">Sign In</button></div>
+                                    <div class="form-group"><a href="#" class="btn btn-danger btn-accounts">Forgot Password?</a></div>
+                                  </form>
+                              </ul>
+                          	</div>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

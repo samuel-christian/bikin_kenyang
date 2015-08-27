@@ -1,0 +1,544 @@
+/**Samuel Christian**/
+/**20 August 2015**/
+@font-face {
+	font-family: 'Chunkfive';
+	src: url(fonts/Chunkfive.otf);
+}
+@font-face {
+	font-family: 'Nobile Regular';
+	src: url(fonts/Nobile-Regular.ttf);
+}
+@font-face {
+	font-family: 'Open Sans Light';
+	src: url(fonts/OpenSans-Light.ttf);
+}
+@font-face {
+	font-family: 'Open Sans Regular';
+	src: url(fonts/OpenSans-Regular.ttf);
+}
+@font-face {
+	font-family: 'Roboto Condensed Light';
+	src: url(fonts/RobotoCondensed-Light.ttf);
+}
+@font-face {
+	font-family: 'Roboto Condensed Regular';
+	src: url(fonts/RobotoCondensed-Regular.ttf);
+}
+
+body { overflow-x: hidden; }
+textarea { resize: none; }
+.header {
+	padding-top: 10px;
+	background: #f7f7f7;
+	border-bottom: 1px solid #c7c7c7;
+	padding: 5px 0px;
+}
+
+.body-container {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.carousel-container {
+	background: #FFFFC6;
+}
+
+.mycarousel {
+	max-height: 500px !important;
+	margin: 0px auto;
+}
+.carousel-inner > .item > img {
+	width: 100%;
+	max-height: 500px !important;
+}
+.carousel-caption {
+	top: 20%;
+	right: 30%;
+	left: 10%;
+	z-index: 0;
+	font-family: 'Roboto Condensed Light';
+	text-align: left;
+	text-shadow: 1px 2px #000;
+	width: 40%;
+}
+.carousel-caption-title {
+	font-size: 40px;
+	letter-spacing: 2px;
+}
+.carousel-caption-content {
+	letter-spacing: 2px;
+	font-size: 25px;
+}
+
+.logo-text {
+	width: 60%;
+	height: 60%;
+}
+.logo-area { line-height: 50px; }
+
+.nav-area { padding-left: 5%; }
+
+.nav-item {
+	line-height: 45px;
+	border-left: 1px solid #d7d7d7;
+	height: 100%;
+}
+.last-nav-item { border-right: 1px solid #d7d7d7; }
+.nav-item:hover {
+	background: #d7d7d7;
+	transition: background-color 0.5s ease;
+}
+.row-nav-item > a {
+	text-decoration: none;
+	color: #000;
+	vertical-align: middle;
+}
+.nav-item > a {
+	text-decoration: none;
+	color: #000;
+	vertical-align: middle;
+}
+
+.login-area {
+	margin-left: 40px;
+	text-align: center;
+}
+.login-area > a {
+	text-decoration: none;
+	color: #000;
+}
+.login-item {
+	line-height: 45px;
+	border-left: 1px solid #d7d7d7;
+	height: 100%;
+}
+.login-item > a {
+	text-decoration: none;
+	color: #000;
+	vertical-align: middle;
+}
+.last-login-item { border-right: 1px solid #d7d7d7; }
+
+.profile-area {
+	margin-left: 140px;
+	text-align: center;
+}
+.profile-area > a {
+	text-decoration: none;
+	color: #000;
+}
+.profile-item {
+	line-height: 45px;
+	border-left: 1px solid #d7d7d7;
+	border-right: 1px solid #d7d7d7;
+	height: 100%;
+	padding: 0px;
+}
+/*.profile-item > * { display: block; }*/
+.profile-item > img {
+	width: 30px;
+	height: 30px;
+	border-radius: 35px;
+	border: 1px solid #aaa;
+	margin: 0px auto;
+}
+
+.dropdown-link { color: #000; text-decoration: none; }
+.dropdown-link:visited { color: #000; text-decoration: none; }
+.dropdown-link:active { color: #000; text-decoration: none; }
+.dropdown-link:hover { color: #000; text-decoration: none; }
+.dropdown-link:focus { color: #000; text-decoration: none; }
+
+.signin-form {
+	width: 250px;
+	left: auto;
+	right: 0;
+}
+.signin-form > form {
+	display: block;
+	padding: 10px 20px;
+}
+.signin-form > form > div > a { color: #fff; }
+.btn-accounts { width: 100%; }
+
+.fav-item-container {
+	width: 100%;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background: #eaeaea;
+}
+.fav-item-container > div {
+	width: 90%;
+}
+.line-through {
+	border-top: 2px solid #aaa;
+	margin-bottom: 50px;
+	position: relative;
+}
+.line-through p {
+	border-top: 1px solid #ddd;
+	top: -23px;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	border: none;
+}
+.fav-item-container-title {
+	background: #fff;
+	font-weight: bold;
+	padding: 0px 30px;
+	font-size: 30px;
+	color: #606060;
+	font-family: 'Open Sans Light';
+	background: #eaeaea;
+}
+.fav-item > * {
+	text-decoration: none;
+	color: #505050;
+	font-family: 'Roboto Condensed Light';
+}
+.fav-item {
+	display: block;
+	width: 286px;
+	height: auto;
+	margin-left: 10%;
+	border: 1px solid #aaa;
+	border-radius: 2px;
+	background: #fff;
+}
+.fav-item > a > img {
+	width: 284px;
+	height: 165px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #aaa;
+}
+.fav-item > a:hover { text-decoration: none; }
+.fav-item-text {
+	margin: 10px auto;
+	padding-bottom: 10px;
+	width: 90%;
+	border-bottom: 1px solid #bbb;
+}
+.fav-item-title {
+	text-align: left;
+	font-size: 16px;
+	margin-left: 10px;
+	width: 120px;
+}
+.fav-item-price {
+	font-size: 16px;
+	text-align: right;
+	margin-right: 10px;
+	display: block;
+	margin-top: 10px;
+}
+.fav-item-controls {
+	margin: 10px auto;
+	width: 90%;
+}
+.fav-controls-order {
+	font-size: 16px;
+}
+.fav-item-controls > a {
+	color: #505050;
+	display: block;
+	padding: 10px 0px;
+}
+.fav-controls-order > * {
+	display: block;
+	margin: 10px auto;
+	width: 100px;
+	text-align: center;
+}
+.fav-item-controls > a:hover {
+	text-decoration: none;
+	color: #fff;
+	background: #3333CC;
+	border-radius: 3px;
+	transition: all 0.5s ease;
+}
+.glyphicon-order{ font-size: 40px; }
+
+.register-form-wrapper {
+	border: 1px solid #d7d7d7;
+	width: 700px;
+	margin: 20px auto;
+	border-radius: 2px;
+}
+.register-form {
+	padding: 10px 20px;
+}
+.register-form > .form-group > label { text-align: left; }
+.register-intro > p {
+	color: #909090;
+}
+.form-actions {
+	margin: 0;
+	background-color: transparent;
+	text-align: center;
+	padding: 10px 0px;
+}
+.form-actions > button { width: 70%; }
+
+.benefits-container {
+	width: 90%;
+	margin: 20px 0px 50px 4%;
+}
+.benefits-item {
+	font-family: 'Open Sans Light';
+	margin-left: 5%;
+	margin-top: 50px;
+}
+.benefits-item > * { display: block; }
+.benefits-item > img { margin: 0px auto; }
+.benefits-text { margin: 0px auto; }
+.benefits-text > * { display: block; }
+.benefits-title {
+	text-align: center;
+	font-weight: bold;
+	color: #505050;
+	font-size: 24px;
+	margin: 10px 0px;
+}
+.benefits-content {
+	font-size: 15px;
+	text-align: center;
+}
+
+.footer { 
+	border: 1px solid #c7c7c7;
+	background: #e7e7e7;
+	border-radius: 2px;
+}
+.footer-logo { line-height: 100px; }
+.footer-logo > img {
+	width: 70%;
+	height: 70%;
+}
+.copyright {
+	text-align: center;
+	line-height: 100px;
+}
+.copyright > div { vertical-align: middle; }
+
+.footer-social-media {
+	margin-left: 40%;
+	margin-top: 10%;
+}
+
+.footer-social-media > a > img {
+	width: 32px;
+	height: 32px;
+}
+
+.product-container { margin: 50px auto; }
+.product-container > div {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 20px 40px 0px;
+	background: #FFFFE0;
+}
+.product-title {
+	font-family: 'Open Sans Light';
+	font-size: 40px;
+	display: block;
+	padding: 20px 10px 30px;
+}
+.product-title > a { text-decoration: none; }
+.product-title > a:hover { color: #337AB7; }
+.product-image { display: block; }
+.product-image > img {
+	display: block;
+	padding: 10px;
+	border: 1px solid #aaa;
+	border-radius: 4px;
+	background: #fff;
+}
+.product-description, .product-price-details {
+	padding-left: 30px;
+	font-family: 'Open Sans Light';
+	font-size: 14px;
+	text-align: justify;
+	display: block;
+}
+.product-price-details {
+	font-size: 28px;
+	margin: 15px 0px 10px 0px;
+	color: #00CF00;
+	display: block;
+}
+.last-price-update {
+	display: block;
+	font-family: 'Roboto Condensed Light';
+	font-size: 12px;
+	float: right;
+}
+.product-controls {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 20px;
+	width: 340px;
+	background: #fff;
+}
+.btn-actions {
+	display: block;
+	margin: 20px auto;
+	width: 250px;
+	height: 40px;
+}
+.product-review {
+	margin: 20px auto;
+}
+.product-review > textarea { font-family: 'Open Sans Light'; }
+.product-review > button { margin: 20px auto; }
+
+.review {
+	border: 1px solid #ccc;
+	background: #fff;
+	font-family: 'Open Sans Light';
+	font-size: 14px;
+	margin: 15px auto;
+	border-radius: 3px;
+}
+.review-name {
+	font-family: 'Open Sans Regular';
+	font-size: 20px;
+	display: block;
+}
+.review-name > a { text-decoration: none; }
+.review-rating {
+	color: yellow;
+	line-height: 30px;
+	display: block;
+}
+.review-info-container { margin: 10px auto; }
+.review-content-container { margin: 15px auto; }
+.review-time {
+	float: right;
+	margin-right: 15%;
+}
+.profile-label{
+	text-align: left;
+	padding-top: 7px;
+	margin-bottom: 0px;
+}
+.cuadro_intro_hover{
+	padding: 0px;
+	position: relative;
+	overflow: hidden;
+	widht:100%;
+	border-radius: 50%
+}
+.cuadro_intro_hover:hover .caption{
+	opacity: 1;
+	transform: translateY(-150px);
+	-webkit-transform:translateY(-150px);
+	-moz-transform:translateY(-150px);
+	-ms-transform:translateY(-150px);
+	-o-transform:translateY(-150px);
+}
+.cuadro_intro_hover img{
+	z-index: 4;
+}
+.cuadro_intro_hover .caption{
+	position: absolute;
+	top:150px;
+	-webkit-transition:all 0.3s ease-in-out;
+	-moz-transition:all 0.3s ease-in-out;
+	-o-transition:all 0.3s ease-in-out;
+	-ms-transition:all 0.3s ease-in-out;
+	transition:all 0.3s ease-in-out;
+	width: 100%;
+}
+.cuadro_intro_hover .blur{
+	background-color: rgba(0,0,0,0.7);
+	height: 100px;
+	z-index: 5;
+	position: absolute;
+	width: 100%;
+	top: 100px;
+}
+.cuadro_intro_hover .caption-text{
+	z-index: 10;
+	color: #fff;
+	position: absolute;
+	height: 300px;
+	text-align: center;
+	top:100px;
+	width: 100%;
+	text-decoration: none;
+}
+.food-about{
+	margin:20px;
+}
+
+.menu-container {
+	margin: 20px auto;
+}
+.food-menu-title {
+	font-family: 'Open Sans Light';
+	margin-bottom: 50px;
+	border-bottom: 1px solid #aaa;
+}
+.food-container {
+	border: 1px solid #aaa;
+	padding: 0px;
+	width: 286px;
+	border-radius: 3px;
+	margin-left: 8%;
+	margin-bottom: 50px;
+}
+.food-container > a:hover { text-decoration: none; }
+.food-image { position: relative; }
+.food-image > img {
+	width: 284px;
+	height: 165px;
+	border-bottom: 1px solid #aaa;
+}
+.food-image > span {
+	position: absolute;
+	text-align: center;
+	right: 0;
+	bottom: 0;
+	padding: 10px 20px;
+	z-index: 9999;
+	background: #337AB7;
+	color: #fff;
+	letter-spacing: 1px;
+	font-family: 'Roboto Condensed Light';
+	border-radius: 2px;
+}
+.food-image > span:hover { text-decoration: none; }
+.food-text > * { display: block; }
+.food-text {
+	font-family: 'Roboto Condensed Light';
+	font-size: 16px;
+	padding: 10px 10px 40px;
+	border-bottom: 1px solid #bbb;
+	margin: 10px;
+}
+.food-price {
+	float: right;
+	padding-bottom: 10px;
+}
+.food-review > * {
+	text-decoration: none;
+	color: #505050;
+	margin: 10px;
+	padding: 0px 10px;
+	display: inline-block;
+}
+.food-review-count {
+	float: right;
+	font-family: 'Roboto Condensed Light';
+	font-size: 15px;
+}
+.food-controls {
+	margin: 10px;
+	padding: 0px 10px;
+}
+.btn-food-controls {
+	display: block;
+	width: 240px;
+	margin: 0px auto;
+}
