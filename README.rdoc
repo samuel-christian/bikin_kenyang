@@ -2,6 +2,21 @@
 
 This a README file.
 
-So what?
+RVMRC Guide
 
-There's nothing here. Move along, pal
+If you encountered this part when try to run rails s:
+
+The program 'rails' can be found in the following packages:
+ * ruby-railties-3.2
+ * ruby-railties-4.0
+Try: sudo apt-get install <selected package>
+
+then try to run:
+
+gem install bundler
+
+after that try to run:
+
+bundle install
+
+Then try again to run rails s.
