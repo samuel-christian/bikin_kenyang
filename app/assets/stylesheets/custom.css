@@ -2,27 +2,27 @@
 /**20 August 2015**/
 @font-face {
 	font-family: 'Chunkfive';
-	src: url(fonts/Chunkfive.otf);
+	src: url(/assets/Chunkfive.otf);
 }
 @font-face {
 	font-family: 'Nobile Regular';
-	src: url(fonts/Nobile-Regular.ttf);
+	src: url(/assets/Nobile-Regular.ttf);
 }
 @font-face {
 	font-family: 'Open Sans Light';
-	src: url(fonts/OpenSans-Light.ttf);
+	src: url(/assets/OpenSans-Light.ttf);
 }
 @font-face {
 	font-family: 'Open Sans Regular';
-	src: url(fonts/OpenSans-Regular.ttf);
+	src: url(/assets/OpenSans-Regular.ttf);
 }
 @font-face {
 	font-family: 'Roboto Condensed Light';
-	src: url(fonts/RobotoCondensed-Light.ttf);
+	src: url(/assets/RobotoCondensed-Light.ttf);
 }
 @font-face {
 	font-family: 'Roboto Condensed Regular';
-	src: url(fonts/RobotoCondensed-Regular.ttf);
+	src: url(/assets/RobotoCondensed-Regular.ttf);
 }
 
 body { overflow-x: hidden; }
