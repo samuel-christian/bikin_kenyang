@@ -265,11 +265,20 @@ textarea { resize: none; }
 	margin: 20px auto;
 	border-radius: 2px;
 }
-.register-form {
+.login-form-wrapper {
+	border: 1px solid #d7d7d7;
+	width: 500px;
+	margin: 20px auto;
+	border-radius: 2px;
+}
+.register-form,
+.login-form {
 	padding: 10px 20px;
 }
-.register-form > .form-group > label { text-align: left; }
-.register-intro > p {
+.register-form > .form-group > label,
+.login-form > .form-group > label { text-align: left; }
+.register-intro > p,
+.login-intro > p {
 	color: #909090;
 }
 .form-actions {
@@ -278,7 +287,15 @@ textarea { resize: none; }
 	text-align: center;
 	padding: 10px 0px;
 }
-.form-actions > button { width: 70%; }
+.form-actions > input { width: 70%; }
+
+.remember-me-label {
+	margin-top: 2px;
+	padding-left: 0px;
+	cursor: pointer;
+}
+.remember-me-checkbox { margin-top: 7px; }
+.remember-me-checkbox > input { height: 0px; }
 
 .benefits-container {
 	width: 90%;
@@ -305,7 +322,7 @@ textarea { resize: none; }
 	text-align: center;
 }
 
-.footer { 
+.footer {
 	border: 1px solid #c7c7c7;
 	background: #e7e7e7;
 	border-radius: 2px;
@@ -542,3 +559,5 @@ textarea { resize: none; }
 	width: 240px;
 	margin: 0px auto;
 }
+
+.label-confirm-password { padding-right: 0px; }

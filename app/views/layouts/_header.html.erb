@@ -27,24 +27,39 @@
       <div class="col-md-3">
         <div class="container">
           <div class="row login-area">
-        		<%= link_to root_path do %>
-            	<div class="col-md-1 login-item">Daftar</div>
-            <% end %>
-            <div class="col-md-1 login-item last-login-item">
-              <div class="dropdown">
-                <a href="#" class="dropdown-toggle dropdown-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                  Masuk <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu signin-form">
-                  <form>
-                    <div class="form-group"><input type="email" class="form-control" id="input-email" placeholder="Email"/></div>
-                    <div class="form-group"><input type="password" class="form-control" id="input-password" placeholder="Password"/></div>
-                    <div class="form-group"><button type="submit" class="btn btn-primary btn-accounts">Sign In</button></div>
-                    <div class="form-group"><a href="#" class="btn btn-danger btn-accounts">Forgot Password?</a></div>
-                  </form>
-                </ul>
+        		<% if user_signed_in? %>
+              <%= link_to(destroy_user_session_path, :method => :delete) do %>
+                <div class="col-md-1 login-item last-login-item">Logout</div>
+              <% end %>
+            <% else %>
+              <%= link_to new_user_registration_path do %>
+                <div class="col-md-1 login-item">Daftar</div>
+              <% end %>
+              <div class="col-md-1 login-item last-login-item">
+                <div class="dropdown">
+                  <a href="#" class="dropdown-toggle dropdown-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    Masuk <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu signin-form">
+                    <%= form_for(@user, url: session_path(@user)) do |f| %>
+                      <div class="form-group">
+                        <%= f.email_field :email, :class => "form-control", :id => "input-email", :placeholder => "Email" %>
+                      </div>
+                      <div class="form-group">
+                        <%= f.password_field :password, :class => "form-control", :id => "input-password", :placeholder => "Password" %>
+                      </div>
+                      <div class="form-group">
+                        <%= f.submit "Masuk", :class => "btn btn-primary btn-accounts" %>
+                      </div>
+                      <div class="form-group">
+                        <%= f.check_box :remember_me %>
+                        <%= f.label :remember_me, :class => 'control-label' %>
+                      </div>
+                    <% end %>
+                  </ul>
+                </div>
               </div>
-            </div>
+            <% end %>
           </div>
         </div>
       </div>

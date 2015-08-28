@@ -1,83 +1,54 @@
-<h2>Daftar</h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
-
 <div class="body">
   <div class="container">
     <div class="register-form-wrapper">
-      <form class="form-horizontal register-form">
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), :html => {:class => 'form-horizontal register-form'}) do |f| %>
+        <%= devise_error_messages! %>
         <div class="text-center register-intro">
           <h3>Daftar</h3>
           <p>Silakan isi <strong>seluruh</strong> informasi mengenai diri Anda di bawah ini</p>
         </div>
         <hr/>
         <div class=" form-group control-group">
-          <label for="input-email" class="control-label col-sm-3">Email</label>
-          <div class="controls col-sm-9">
-            <input class="form-control" id="input-email" type="text">
+          <%= f.label :email, :class => 'control-label col-sm-3' %>
+          <div class="controls col-sm-8">
+            <%= f.email_field :email, autofocus: true, :id => 'input-email', :class => 'form-control' %>
           </div>
         </div>
         <div class="form-group control-group">
-          <label for="input-password" class="control-label col-sm-3">Password</label>
-          <div class="controls col-sm-9">
-            <input class="form-control" id="input-password" type="password">
+          <%= f.label :password, :class => 'control-label col-sm-3' %>
+          <div class="controls col-sm-8">
+            <%= f.password_field :password, autocomplete: "off", :id => 'input-password', :class => 'form-control' %>
           </div>
         </div>
         <div class="form-group control-group">
-          <label for="repeat-input-password" class="control-label col-sm-3">Konfirmasi Pasword</label>
-          <div class="controls col-sm-9">
-            <input class="form-control" id="repeat-input-password" type="password">
+          <%= f.label :password_confirmation, 'Konfirmasi Password', :class => 'control-label col-sm-3 label-confirm-password' %>
+          <div class="controls col-sm-8">
+            <%= f.password_field :password_confirmation, autocomplete: "off", :class => 'form-control', :id => 'repeat-input-password' %>
           </div>
         </div>
         <hr/>
         <div class=" form-group control-group">
-          <label for="input-nama" class="control-label col-sm-3">Nama Depan</label>
-          <div class="controls col-sm-9">
-            <input class="form-control" id="input-nama" type="text">
+          <%= f.label :first_name, 'Nama Depan', :class => 'control-label col-sm-3' %>
+          <div class="controls col-sm-8">
+            <%= f.text_field :first_name, :class => 'form-control', :id => 'input-nama-depan' %>
           </div>
         </div>
         <div class=" form-group control-group">
-          <label for="input-nama" class="control-label col-sm-3">Nama Belakang</label>
-          <div class="controls col-sm-9">
-            <input class="form-control" id="input-nama" type="text">
+          <%= f.label :first_name, 'Nama Belakang', :class => 'control-label col-sm-3' %>
+          <div class="controls col-sm-8">
+            <%= f.text_field :first_name, :class => 'form-control', :id => 'input-nama-belakang' %>
           </div>
         </div>
         <div class=" form-group control-group">
-          <label for="input-phone" class="control-label col-sm-3">Alamat</label>
-          <div class="controls col-sm-9">
-            <textarea class="form-control" id="input-address"></textarea>
+          <%= f.label :address, 'Alamat', :class => 'control-label col-sm-3' %>
+          <div class="controls col-sm-8">
+            <%= f.text_area :address, :class => 'form-control', :id => 'input-address' %>
           </div>
         </div>
         <div class=" form-group control-group">
-          <label for="input-phone" class="control-label col-sm-3">No Telepon</label>
-          <div class="controls col-sm-9">
-            <input class="form-control" id="input-phone" type="phone">
+          <%= f.label :phone_number, 'No Telepon', :class => 'control-label col-sm-3' %>
+          <div class="controls col-sm-8">
+            <%= f.telephone_field :phone_number, :class => 'form-control', :id => 'input-phone' %>
           </div>
         </div>
         <hr/>
@@ -88,9 +59,9 @@
         </div>
         <hr/>
         <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Daftar</button>
+          <%= f.submit "Daftar", :class => 'btn btn-primary' %>
         </div>
-      </form>
+      <% end %>
     </div>
   </div>
 </div>
