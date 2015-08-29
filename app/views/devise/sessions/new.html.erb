@@ -30,9 +30,12 @@
         <% end %>
         <hr/>
         <div class="form-actions">
-          <%= f.submit "Masuk", :class => 'btn btn-primary' %>
+          <%= f.submit "Masuk", :class => 'btn btn-primary' %>         
         </div>
-        <%= render "devise/shared/links" %>
+        <div class="form-actions">
+           <%= render "devise/shared/links" %>
+        </div>
+        
       <% end %>
     </div>
   </div>
