@@ -561,3 +561,7 @@ textarea { resize: none; }
 }
 
 .label-confirm-password { padding-right: 0px; }
+
+.navbar-fixed-bottom{
+	background: #e7e7e7;
+}
