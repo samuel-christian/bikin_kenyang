@@ -28,10 +28,9 @@
 body { overflow-x: hidden; }
 textarea { resize: none; }
 .header {
-	padding-top: 10px;
 	background: #f7f7f7;
 	border-bottom: 1px solid #c7c7c7;
-	padding: 5px 0px;
+	padding: 0px;
 }
 
 .body-container {
@@ -71,22 +70,27 @@ textarea { resize: none; }
 }
 
 .logo-text {
-	width: 60%;
-	height: 60%;
+	width: 50%;
+	height: 50%;
+	padding-top: 5px;
 }
-.logo-area { line-height: 50px; }
+/*.logo-area { line-height: 50px; }*/
 
 .nav-area { padding-left: 5%; }
 
+.row-nav-item > a > div.active {
+	border-bottom: 5px solid #000;
+}
 .nav-item {
 	line-height: 45px;
-	border-left: 1px solid #d7d7d7;
+	/*border-left: 1px solid #d7d7d7;*/
 	height: 100%;
 }
-.last-nav-item { border-right: 1px solid #d7d7d7; }
+/*.last-nav-item { border-right: 1px solid #d7d7d7; }*/
 .nav-item:hover {
-	background: #d7d7d7;
-	transition: background-color 0.5s ease;
+	/*background: #d7d7d7;*/
+	border-bottom: 5px solid #000;
+	/*transition: all 0.5s ease;*/
 }
 .row-nav-item > a {
 	text-decoration: none;
@@ -109,7 +113,7 @@ textarea { resize: none; }
 }
 .login-item {
 	line-height: 45px;
-	border-left: 1px solid #d7d7d7;
+	/*border-left: 1px solid #d7d7d7;*/
 	height: 100%;
 }
 .login-item > a {
@@ -117,7 +121,7 @@ textarea { resize: none; }
 	color: #000;
 	vertical-align: middle;
 }
-.last-login-item { border-right: 1px solid #d7d7d7; }
+/*.last-login-item { border-right: 1px solid #d7d7d7; }*/
 
 .profile-area {
 	margin-left: 140px;

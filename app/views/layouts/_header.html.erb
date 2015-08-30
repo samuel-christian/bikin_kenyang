@@ -9,16 +9,16 @@
           <div class="container">
             <div class="row pull-center row-nav-item">
               <%= link_to root_path do %>
-              	<div class="col-md-1 nav-item">Home</div>
+              	<div class="col-md-1 nav-item <%= active_page(root_path) %>">Home</div>
               <% end %>
               <%= link_to root_path do %>
-              	<div class="col-md-1 nav-item">Menu</div>
+              	<div class="col-md-1 nav-item <%#= active_page(menu_path) %>">Menu</div>
               <% end %>
               <%= link_to root_path do %>
-              	<div class="col-md-1 nav-item">About</div>
+              	<div class="col-md-1 nav-item <%#= active_page(about_path) %>">About</div>
               <% end %>
               <%= link_to root_path do %>
-              	<div class="col-md-1 nav-item last-nav-item">Contact</div>
+              	<div class="col-md-1 nav-item <%#= active_page(contact_path) %>">Contact</div>
               <% end %>
             </div>
           </div>
