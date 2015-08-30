@@ -111,6 +111,9 @@ textarea { resize: none; }
 	text-decoration: none;
 	color: #000;
 }
+.login-area > a > div.active {
+	border-bottom: 5px solid #000;
+}
 .login-item {
 	line-height: 45px;
 	/*border-left: 1px solid #d7d7d7;*/
@@ -120,6 +123,15 @@ textarea { resize: none; }
 	text-decoration: none;
 	color: #000;
 	vertical-align: middle;
+}
+.login-item:hover {
+	border-bottom: 5px solid #000;
+}
+.login-dropdown {
+	border-bottom: none;
+}
+.login-dropdown:hover {
+	border-bottom: none;
 }
 /*.last-login-item { border-right: 1px solid #d7d7d7; }*/
 

@@ -9,7 +9,7 @@
           <div class="container">
             <div class="row pull-center row-nav-item">
               <%= link_to root_path do %>
-              	<div class="col-md-1 nav-item <%= active_page(root_path) %>">Home</div>
+              	<div class="col-md-1 nav-item <%= active_page(root_path, request) %>">Home</div>
               <% end %>
               <%= link_to root_path do %>
               	<div class="col-md-1 nav-item <%#= active_page(menu_path) %>">Menu</div>
@@ -33,32 +33,38 @@
               <% end %>
             <% else %>
               <%= link_to new_user_registration_path do %>
-                <div class="col-md-1 login-item">Daftar</div>
+                <div class="col-md-1 login-item <%= active_page(new_user_registration_path, request) %>">Daftar</div>
               <% end %>
-              <div class="col-md-1 login-item last-login-item">
-                <div class="dropdown">
-                  <a href="#" class="dropdown-toggle dropdown-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                    Masuk <span class="caret"></span>
-                  </a>
-                  <ul class="dropdown-menu signin-form">
-                    <%= form_for(@user, url: session_path(@user)) do |f| %>
-                      <div class="form-group">
-                        <%= f.email_field :email, :class => "form-control", :id => "input-email", :placeholder => "Email" %>
-                      </div>
-                      <div class="form-group">
-                        <%= f.password_field :password, :class => "form-control", :id => "input-password", :placeholder => "Password" %>
-                      </div>
-                      <div class="form-group">
-                        <%= f.submit "Masuk", :class => "btn btn-primary btn-accounts" %>
-                      </div>
-                      <div class="form-group">
-                        <%= f.check_box :remember_me %>
-                        <%= f.label :remember_me, :class => 'control-label' %>
-                      </div>
-                    <% end %>
-                  </ul>
+              <% if active_page(new_user_session_path, request) == "active" || active_page(user_session_path, request) == "active" %>
+                <%= link_to "#" do %>
+                  <div class="col-md-1 login-item active">Masuk</div>
+                <% end %>
+              <% else %>
+                <div class="col-md-1 login-item login-dropdown">
+                  <div class="dropdown <%= active_page(new_user_session_path, request) %>">
+                    <a href="#" class="dropdown-toggle dropdown-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                      Masuk <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu signin-form">
+                      <%= form_for(@user, url: new_user_session_path(@user)) do |f| %>
+                        <div class="form-group">
+                          <%= f.email_field :email, :class => "form-control", :id => "input-email", :placeholder => "Email" %>
+                        </div>
+                        <div class="form-group">
+                          <%= f.password_field :password, :class => "form-control", :id => "input-password", :placeholder => "Password" %>
+                        </div>
+                        <div class="form-group">
+                          <%= f.submit "Masuk", :class => "btn btn-primary btn-accounts" %>
+                        </div>
+                        <div class="form-group">
+                          <%= f.check_box :remember_me %>
+                          <%= f.label :remember_me, :class => 'control-label' %>
+                        </div>
+                      <% end %>
+                    </ul>
+                  </div>
                 </div>
-              </div>
+              <% end %>
             <% end %>
           </div>
         </div>
