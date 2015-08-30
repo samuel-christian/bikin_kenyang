@@ -28,8 +28,37 @@
         <div class="container">
           <div class="row login-area">
         		<% if user_signed_in? %>
-              <%= link_to(destroy_user_session_path, :method => :delete) do %>
-                <div class="col-md-1 login-item last-login-item">Logout</div>
+              <%= link_to user_path(@user) do %>
+                <div class="col-md-3 login-profile">
+                  <div class="dropdown">
+                    <a href="#" class="dropdown-toggle dropdown-link" data-toggle="dropdown" rol="button" aria-haspopup="true" aria-expanded="false">
+                      Selamat datang, <%= @user.first_name %> <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu profile-login-dropdown-menu">
+                      <li>
+                        <%= link_to user_path(@user) do %>
+                          <i class="glyphicon glyphicon-user"></i> Profil
+                        <% end %>
+                      </li>
+                      <li>
+                        <%= link_to edit_user_path(@user) do %>
+                          <i class="glyphicon glyphicon-edit"></i> Pengaturan
+                        <% end %>
+                      </li>
+                      <li>
+                        <%= link_to '#' do %>
+                          <i class="glyphicon glyphicon-shopping-cart"></i> Pembelian
+                        <% end %>
+                      </li>
+                      <li role="separator" class="divider"></li>
+                      <li>
+                        <%= link_to destroy_user_session_path, :method => :delete do %>
+                          <i class="glyphicon glyphicon-off"></i> Keluar
+                        <% end %>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               <% end %>
             <% else %>
               <%= link_to new_user_registration_path do %>

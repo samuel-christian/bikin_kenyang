@@ -1,0 +1,62 @@
+<div class="body">
+	<div class="container profile-container">
+		<div class="row profile">
+			<div class="col-md-3">
+				<%= image_tag 'pp.png', :class => "profile-user-pic" %>
+			</div>
+			<div class="col-md-9">
+				<div class="profile-content">
+					<div class="profile-info">
+						<div class="row">
+							<div class="col-md-10">
+								<span class="profile-user-name"><%= full_name(@user) %></span>
+							</div>
+							<div class="col-md-2 edit-profile">
+								<%= link_to edit_user_path(@user) do %>
+									<span class="btn btn-primary"><i class="glyphicon glyphicon-edit"></i> Ubah Profile</span>
+								<% end %>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-7 user-info"><i class="glyphicon glyphicon-envelope"></i> <%= @user.email %></div>
+						</div>
+						<div class="row">
+							<div class="col-md-7 user-info"><i class="glyphicon glyphicon-earphone"></i> <%= @user.phone_number %></div>
+						</div>
+						<div class="row">
+							<div class="col-md-7 user-info"><i class="glyphicon glyphicon-home"></i> <%= @user.address %></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row profile">
+			<div class="col-md-3">
+				<ul class="profile-actions-list">
+					<li class="profile-actions-list-item-title">Profil Saya</li>
+					<li class="profile-actions-list-item">
+						<%= link_to '#' do %>
+							<i class="glyphicon glyphicon-shopping-cart"></i> Pembelian
+						<% end %>
+					</li>
+					<li class="profile-actions-list-item">
+						<%= link_to '#' do %>
+							<i class="glyphicon glyphicon-gift"></i> Lihat Poin
+						<% end %>
+					</li>
+					<li class="profile-actions-list-item-title">Lainnya</li>
+					<li class="profile-actions-list-item">
+						<%= link_to '#' do %>
+							<i class="glyphicon glyphicon-envelope"></i> Pesan
+						<% end %>
+					</li>
+					<li class="profile-actions-list-item">
+						<%= link_to '#' do %>
+							<i class="glyphicon glyphicon-pencil"></i> Review
+						<% end %>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

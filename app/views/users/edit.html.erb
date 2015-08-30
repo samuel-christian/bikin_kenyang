@@ -1,0 +1,16 @@
+<div class="body">
+	<div class="container">
+		<%= form_for @user, :html => {:class => 'form-horizontal'} do |f| %>
+			<div class=" form-group control-group">
+        <%= f.label :email, :class => 'control-label col-sm-3' %>
+        <div class="controls col-sm-8">
+          <%= f.email_field :email, autofocus: true, :id => 'input-email', :class => 'form-control' %>
+        </div>
+      </div>
+      <hr/>
+      <div class="form-actions">
+        <%= f.submit "Simpan", :class => 'btn btn-primary' %>
+      </div>
+		<% end %>
+	</div>
+</div>
