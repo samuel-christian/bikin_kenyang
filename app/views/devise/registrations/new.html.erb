@@ -36,7 +36,14 @@
         <div class=" form-group control-group">
           <%= f.label :first_name, 'Nama Belakang', :class => 'control-label col-sm-3' %>
           <div class="controls col-sm-8">
-            <%= f.text_field :first_name, :class => 'form-control', :id => 'input-nama-belakang' %>
+            <%= f.text_field :last_name, :class => 'form-control', :id => 'input-nama-belakang' %>
+          </div>
+        </div>
+        <div class="form-group control-group">
+          <%= f.label :gender, 'Jenis Kelamin', :class => 'control-label col-sm-3' %>
+          <div class="controls col-sm-8">
+            <%= f.radio_button :gender, 0, :id => "male" %> <%= f.label :gender, "Laki-laki", :for => "male", :value => 0 %>
+            <%= f.radio_button :gender, 1, :id => "female" %> <%= f.label :gender, "Perempuan", :for => "female", :value => 1 %>
           </div>
         </div>
         <div class=" form-group control-group">
@@ -49,6 +56,12 @@
           <%= f.label :phone_number, 'No Telepon', :class => 'control-label col-sm-3' %>
           <div class="controls col-sm-8">
             <%= f.telephone_field :phone_number, :class => 'form-control', :id => 'input-phone' %>
+          </div>
+        </div>
+        <div class="form-group control-group">
+          <%= f.label :birthday, 'Tanggal Lahir', :class => 'control-label col-sm-3' %>
+          <div class="controls col-sm-8">
+            <%= f.date_field :birthday, :class => "form-control date" %>
           </div>
         </div>
         <hr/>

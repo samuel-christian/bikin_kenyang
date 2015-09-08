@@ -4,13 +4,19 @@
 			<div class=" form-group control-group">
         <%= f.label :email, :class => 'control-label col-sm-3' %>
         <div class="controls col-sm-8">
-          <%= f.email_field :email, autofocus: true, :id => 'input-email', :class => 'form-control' %>
+          <%= f.email_field :email, autofocus: true, :id => 'input-email', :class => 'form-control', :disabled => :true %>
         </div>
       </div>
       <hr/>
       <div class="form-actions">
-        <%= f.submit "Simpan", :class => 'btn btn-primary' %>
+        <div class="row">
+          <div class="col-md-6">
+            <%= f.submit "Simpan", :class => 'btn btn-primary' %>
+            <%= link_to "Kembali", user_path(@user), :class => 'btn btn-danger' %>
+          </div>
+        </div>
       </div>
 		<% end %>
+    <%= @user.inspect %>
 	</div>
 </div>

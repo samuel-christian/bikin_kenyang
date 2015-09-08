@@ -12,7 +12,14 @@
 //
 //= require jquery
 //= require twitter/bootstrap
+//= require bootstrap-datepicker
 //= require jquery_ujs
 //= require turbolinks
 //= require application
 //= require_tree .
+
+$(document).ready(function() {
+	$('.date').datepicker({
+		format: "yyyy/mm/dd"
+	});
+});

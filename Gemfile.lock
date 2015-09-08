@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/Nerian/bootstrap-datepicker-rails.git
+  revision: 486f26e0c4cbbc6e55a1d8a477a550f5a6594a8d
+  specs:
+    bootstrap-datepicker-rails (1.4.0)
+      railties (>= 3.0)
+
+GIT
   remote: git://github.com/seyhunak/twitter-bootstrap-rails.git
   revision: a889e2d6e6527b94234b88f0c6b635d29d8e7ae8
   specs:
@@ -171,6 +178,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-datepicker-rails!
   byebug
   coffee-rails (~> 4.1.0)
   devise

@@ -118,6 +118,7 @@ textarea { resize: none; }
 .login-item {
 	line-height: 45px;
 	height: 100%;
+	color: #828282;
 }
 .login-item > a {
 	text-decoration: none;
