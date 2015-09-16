@@ -10,6 +10,12 @@ Rails.application.routes.draw do
 
   root 'home#index'
   resources :users, :only => [:show, :edit, :update]
+
+  namespace :admin do
+    root 'admin#index'
+    resources :menus
+    resources :users
+  end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
