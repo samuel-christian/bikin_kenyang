@@ -51,6 +51,14 @@
                         <% end %>
                       </li>
                       <li role="separator" class="divider"></li>
+                      <% if !@user.admin.zero? ? true : false %>
+                      <li>
+                        <%= link_to admin_root_path do %>
+                          <i class="glyphicon glyphicon-wrench"></i> Admin Panel
+                        <% end %>
+                      </li>
+                      <li role="separator" class="divider"></li>
+                      <% end %>
                       <li>
                         <%= link_to destroy_user_session_path, :method => :delete do %>
                           <i class="glyphicon glyphicon-off"></i> Keluar
