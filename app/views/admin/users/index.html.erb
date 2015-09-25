@@ -4,27 +4,29 @@
 	}
 </style>
 <div class="body">
-	<span>User count: <%= @users.size %></span>
-	<table border="1">
-		<tr>
-			<th>No</th>
-			<th>Email</th>
-			<th>Nama</th>
-			<th>No Telepon</th>
-			<th>Alamat</th>
-			<th>Jenis Kelamin</th>
-			<th>Tanggal Lahir</th>
-		</tr>
-		<% @users.each_with_index do |user, index| %>
-		<tr>
-			<td><%= index+1 %></td>
-			<td><%= user.email %></td>
-			<td><%= user.first_name + " " + user.last_name %></td>
-			<td><%= user.phone_number %></td>
-			<td><%= user.address %></td>
-			<td><%= user.gender == 0 ? 'Laki-laki' : 'Perempuan' %></td>
-			<td><%= user.birthday.nil? ? '-' : user.birthday %></td>
-		</tr>
-		<% end %>
-	</table>
+	<div class="container-fluid">
+		<span>User count: <%= @users.size %></span>
+		<table class="table table-bordered table-striped">
+			<tr>
+				<th>No</th>
+				<th>Email</th>
+				<th>Nama</th>
+				<th>No Telepon</th>
+				<th>Alamat</th>
+				<th>Jenis Kelamin</th>
+				<th>Tanggal Lahir</th>
+			</tr>
+			<% @users.each_with_index do |user, index| %>
+			<tr>
+				<td><%= index+1 %></td>
+				<td><%= user.email %></td>
+				<td><%= user.first_name + " " + user.last_name %></td>
+				<td><%= user.phone_number %></td>
+				<td><%= user.address %></td>
+				<td><%= user.gender == 0 ? 'Laki-laki' : 'Perempuan' %></td>
+				<td><%= user.birthday.nil? ? '-' : user.birthday %></td>
+			</tr>
+			<% end %>
+		</table>
+	</div>
 </div>

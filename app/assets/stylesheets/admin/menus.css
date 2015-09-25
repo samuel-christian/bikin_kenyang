@@ -1,0 +1,10 @@
+.admin-menu-image {
+	border: 1px solid #d7d7d7;
+	display: block;
+	margin: 0px auto;
+	border-radius: 2px;
+}
+.attributes { margin-top: 20px; }
+.admin-edit-image {
+	border: 1px solid #d7d7d7;
+}

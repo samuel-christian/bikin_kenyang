@@ -7,8 +7,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<%= render 'layouts/admin_header' %>
-	<br/>
-	<%= yield %>
+	<div class="main-container">
+		<%= render 'layouts/admin_header' %>
+		<div class="body">
+			<div class="container-fluid">
+				<% flash.each do |key, value| %>
+					<% if key != "notice" %>
+						<div class="alert alert-<%= key %>"><%= value %></div>
+					<% end %>
+				<% end %>
+				<%= yield %>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

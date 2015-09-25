@@ -1,0 +1,42 @@
+<h1>Edit Menu #<%= @menu.id %></h1>
+<%= form_for @menu, :url => admin_menu_path(@menu), :html => {:class => 'form-horizontal register-form'} do |f| %>
+	<div class=" form-group control-group">
+    <%= f.label :name, :class => 'control-label col-sm-3' %>
+    <div class="controls col-sm-8">
+      <%= f.text_field :name, autofocus: true, :id => 'input-name', :class => 'form-control' %>
+    </div>
+  </div>
+  <div class=" form-group control-group">
+    <%= f.label :price, :class => 'control-label col-sm-3' %>
+    <div class="controls col-sm-8">
+    	<div class="input-group">
+    		<span class="input-group-addon">Rp.</span>
+        <%= f.number_field :price, :value => @menu.price/1000, autofocus: true, :id => 'input-price', :class => 'form-control' %>
+        <span class="input-group-addon"><small>x1000</small></span>
+    	</div>
+    </div>
+  </div>
+  <div class=" form-group control-group">
+    <%= f.label :day, :class => 'control-label col-sm-3' %>
+    <div class="controls col-sm-8">
+    	<%= f.select(:day, [["Senin", "1"], ["Selasa", "2"], ["Rabu", "3"], ["Kamis", "4"], ["Jumat", "5"], ["Sabtu", "6"], ["Minggu", "7"]], autofocus: true, :id => 'input-name', :class => 'form-control') %>
+    </div>
+  </div>
+  <div class=" form-group control-group">
+    <%= f.label :image, :class => 'control-label col-sm-3' %>
+    <div class="controls col-sm-8">
+      <div class="row">
+      	<div class="col-sm-4">
+      		<%= image_tag @menu.image.url.to_s, :class => "admin-edit-image" %>
+      	</div>
+      	<div class="col-sm-3">
+      		<%= f.file_field :image, autofocus: true, :id => 'input-image' %>
+      	</div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <%= f.submit "Submit", :class => 'btn btn-primary' %>
+    <%= link_to "Cancel", admin_menus_path, :class => 'btn btn-danger' %>
+  </div>
+<% end %>
