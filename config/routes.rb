@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   root 'home#index'
   resources :users, :only => [:show, :edit, :update]
+  resources :menus, :only => [:index, :show]
 
   namespace :admin do
     root 'admin#index'

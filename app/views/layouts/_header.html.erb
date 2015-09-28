@@ -11,8 +11,8 @@
               <%= link_to root_path do %>
               	<div class="col-md-1 nav-item <%= active_page(root_path, request) %>">Home</div>
               <% end %>
-              <%= link_to root_path do %>
-              	<div class="col-md-1 nav-item <%#= active_page(menu_path) %>">Menu</div>
+              <%= link_to menus_path do %>
+              	<div class="col-md-1 nav-item <%= active_page(menus_path, request) %>">Menu</div>
               <% end %>
               <%= link_to root_path do %>
               	<div class="col-md-1 nav-item <%#= active_page(about_path) %>">About</div>

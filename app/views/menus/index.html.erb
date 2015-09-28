@@ -1,0 +1,44 @@
+<div class="container menu-container">
+  <div class="row">
+	  <div class="col-md-12 food-menu-title">
+      <h1>Our Menu</h1>
+	  </div>
+  </div>
+	<% @items.each do |row_item| %>
+		<div class="row">
+			<% row_item.each do |item| %>
+				<div class="col-md-4">
+		      <div class="food-container">
+		      	<%= link_to "#" do %>
+		          <div class="food-image">
+		            <%= image_tag item.image.url.to_s %>
+		            <% if !item.discount.zero? %>
+		            	<span>-<%= item.discount.to_i %>%</span>
+		            <% end %>
+		          </div>
+		          <div class="food-text">
+		            <span class="food-name"><%= item.name %></span>
+		            <span class="food-price">Rp. <%= number_with_delimiter(item.price.to_i, :delimiter => '.') %>,-</span>
+		          </div>
+		          <div class="food-review">
+		            <span class="food-rating">
+		            	<% if item.rating.zero? %>
+		            		No Rating
+		            	<% else %>
+		            		<% for rating in 1..item.rating do %>
+		            			<span class="glyphicon glyphicon-star"></span>
+		            		<% end %>
+		            	<% end %>
+		            </span>
+		            <span class="food-review-count">12 reviews</span>
+		          </div>
+		        <% end %>
+		        <div class="food-controls">
+		          <button class="btn btn-success btn-food-controls">Pesan</button>
+		        </div>
+		      </div>
+		    </div>
+			<% end %>
+		</div>
+	<% end %>
+</div>
