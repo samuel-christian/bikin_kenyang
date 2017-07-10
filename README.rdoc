@@ -1,22 +1,4 @@
-== README
+== BIKIN KENYANG
 
-This a README file.
-
-RVMRC Guide
-
-If you encountered this part when try to run rails s:
-
-The program 'rails' can be found in the following packages:
- * ruby-railties-3.2
- * ruby-railties-4.0
-Try: sudo apt-get install <selected package>
-
-then try to run:
-
-gem install bundler
-
-after that try to run:
-
-bundle install
-
-Then try again to run rails s.
+Bikin kenyang is an app acts as middle part between caterers and consumers. The app provides variety of caterers which users can choose.
+This project is discontinued as for Oct 2015.
